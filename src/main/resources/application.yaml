@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /teste
+
+logging:
+  level:
+    root: debug
+    org.hibernate.SQL: error
+    org.springframework.data: debug
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: teste-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+  datasource:
+    username: postgres
+    password: mysecretpassword
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
